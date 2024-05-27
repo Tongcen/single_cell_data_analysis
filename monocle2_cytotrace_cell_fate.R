@@ -242,21 +242,6 @@ str(p,2)
 #                             show_rownames = T)
 # dev.off()
 
-
-
-cds_start_2_plot$annotation_col
-p$tree_row
-clusters <- cutree(p$tree_row, k=4)
-clustering <- data.frame(clusters)
-clustering[,1] <- as.character(clustering[,1])
-colnames(clustering) <- "Gene_Clusters"
-table(clustering)
-write.csv (clustering, "Time_clustering_all.csv")
-
-
-HORVU.MOREX.r3.4HG0410930
-
-HORVU.MOREX.r3.7HG0741770
 a = c("HORVU.MOREX.r3.6HG0564480", "HORVU.MOREX.r3.3HG0234040")
 plot_genes_in_pseudotime(a, color_by = "seurat_clusters")
 
